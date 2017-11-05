@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Visual Speller</title>
+  <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+  
+
+  <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/SignUp/signupstyle.css">
+      <style type="text/css">
+      h1{
+        color: #665851;
+      }
+      form{
+        background-color: white;
+      }
+
+      </style>
+
+  
+</head>
+
+    
+    <body>
+
+      <form method="post">
+      
+        <h1>INDIVIDUAL USER</h1>
+        
+        <fieldset>
+          <legend></legend>
+          <label for="name">NAME:</label>
+          <input type="text" id="name" name="user_name" required="">
+          
+          <label for="mail">EMAIL:</label>
+          <input type="email" id="mail" name="user_email" onblur="f1()" required="">
+          
+          
+          <label for="contact">CONTACT NUMBER:</label>
+          <input type="NUMBER" id="contact" name="user_email" required="">
+
+          <label for="password">PASSWORD:</label>
+          <input type="password" id="password" name="user_password" required="">
+
+
+          <label for="cpassword">CONFIRM PASSWORD:</label>
+          <input type="password" id="cpassword" name="user_email" required="" onblur="f2()" required="">
+
+          
+          <label>GENDER:</label>
+          <input type="radio" id="under_13" name="user_age"><label for="under_13" class="light">Male</label><br>
+          <input type="radio" id="over_13" name="user_age"><label for="over_13" class="light">Female</label><br><br>
+
+          <label for="address">ADDRESS:</label>
+          <textarea></textarea>
+          <p><label for="country">SELECT COUNTRY:</label><select name="country" required="">
+      <option value="UK">India</option>
+      <option value="USA">United States of America</option>
+      <option value="SA">South Africa </option>
+      <option value="SA">France </option>
+      <option value="SA">Sri Lanka </option>
+      </select></p>
+
+        </fieldset>
+        
+        
+        <button type="submit">REGISTER</button><br>
+      <p id="err">
+      <br/>
+      </form>
+      <script type="text/javascript">
+
+    function f1()
+    {
+      var id=document.getElementById("mail").value;
+      if(id.match(/\w+@\w+[.]\w/g)==null)
+      {
+        window.alert("enter in the format username@test.com");
+        document.getElementById("mail").value="";
+      }
+
+        
+    }
+    function f2()
+    {
+      
+      var p1=document.getElementById("password").value;
+      var p2=document.getElementById("cpassword").value;
+      if(p1!=p2)
+      {
+
+        window.alert("The passwords do not match");
+        document.getElementById("password").value="";
+        document.getElementById("cpassword").value="";
+
+      }
+    }
+  </script>
+    </body>
+</html>
+  
+  
+</body>
+</html>

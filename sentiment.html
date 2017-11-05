@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Speller</title>
+  <meta name="description" content="Visual Speller">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,300,700">
+  <link rel="stylesheet" href="css/Home/style.css">
+</head>
+<body>
+
+<div class="content">
+  <input type="file" align="center"> <input type="button" name="senti" value="start webcam"><br><br>
+  <a href="main_sentiment_page.html" class="content__cta" target="_parent">START</a>
+</div>
+  
+
+<video id="my-video" class="video" muted loop>
+  <source src="media/senti.mp4" type="video/mp4">
+  <source src="media/senti.ogv" type="video/ogg">
+  <source src="media/senti.webm" type="video/webm">
+
+</video><!-- /video -->
+
+<script>
+(function() {
+  /**
+   * Video element
+   * @type {HTMLElement}
+   */
+  var video = document.getElementById("my-video");
+
+  /**
+   * Check if video can play, and play it
+   */
+  video.addEventListener( "canplay", function() {
+    video.play();
+  });
+})();
+</script>
+
+</body>
+</html>

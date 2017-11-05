@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Speller</title>
+  <meta name="description" content="Visual Speller">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,300,700">
+  <link rel="stylesheet" href="css/Home/style.css">
+</head>
+<body>
+
+<video id="my-video" class="video" muted loop>
+  <source src="media/lipread.mp4" type="video/mp4">
+  <source src="media/lipread.ogv" type="video/ogg">
+  <source src="media/lipread.webm" type="video/webm">
+</video><!-- /video -->
+
+<script>
+
+
+(function() {
+  /**
+   * Video element
+   * @type {HTMLElement}
+   */
+  var video = document.getElementById("my-video");
+
+  /**
+   * Check if video can play, and play it
+   */
+  video.addEventListener( "canplay", function() {
+    video.play();
+  });
+})();
+</script>
+
+</body>
+</html>
